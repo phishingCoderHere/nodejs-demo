@@ -1,7 +1,6 @@
 var http = require('http')
 
 var serverInstance = http.createServer()
-
 var port = 3000
 
 serverInstance.listen(port, function() {
