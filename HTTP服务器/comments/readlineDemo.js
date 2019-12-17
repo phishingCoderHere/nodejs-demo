@@ -7,3 +7,4 @@ const reader = rl.createInterface({
 reader.on('line', arr => {
   console.log(arr + '\\n')
 })
+
