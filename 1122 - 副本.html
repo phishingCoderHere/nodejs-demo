@@ -1,0 +1,15 @@
+<div class="col-md-3">
+    <div class="form-group">
+        <label for="" class="col-sm-4 control-label input-sm">项目反馈状态</label>
+        <div class="col-sm-8">
+            <select class="form-control selectpicker  show-tick input-sm" id="psignstate" name="psignstate" data-actions-box="true" >
+                <option value="">请选择</option>
+                <c:forEach items="${psignstateList}" var="psignstateGroup">
+                    <c:if test="psignstateGroup.value = '1' or psignstateGroup.value = '2'">
+                        <option value="${psignstateGroup.value}">${psignstateGroup.label}</option>
+                    </c:if>
+                </c:forEach>
+            </select>
+        </div>
+    </div>
+</div>
