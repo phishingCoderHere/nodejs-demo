@@ -1,0 +1,5 @@
+const foo  = require('./foo')
+console.log('foo ---> ', foo)
+console.log('add', foo.add(100,200))
+console.log('add', foo.addSub(100,200))
+console.log('add', foo.sub(100,200))
