@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "learn nodejs demo proj",
+  "main": "index.js",
+  "dependencies": {
+    "ajax-form": "^2.1.4",
+    "art-template": "^4.13.2",
+    "bootstrap": "^4.4.1",
+    "comments": "^0.3.6",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuoTianHao/nodejs-demo.git"
+  },
+  "author": "gotio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuoTianHao/nodejs-demo/issues"
+  },
+  "homepage": "https://github.com/GuoTianHao/nodejs-demo#readme"
+}
