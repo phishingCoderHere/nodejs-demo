@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/express_art_template/main.js",
-            "cwd": "${workspaceFolder}/express_art_template"
+            "program": "${workspaceFolder}/crud-express/main.js",
+            "cwd": "${workspaceFolder}/crud-express"
         }
     ]
 }
