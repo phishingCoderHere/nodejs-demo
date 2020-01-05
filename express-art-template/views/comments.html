@@ -1,0 +1,26 @@
+<html dir="ltr" lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate">
+    <title id="title">welcome</title>
+</head>
+
+<body>
+    <p1>welcome</p1>
+    <h3>评论列表</h3>
+    <ul>
+        {{each comments}}
+        <li>{{$value.datetime}} {{$value.name}}说： {{$value.txt}}</li>
+        {{/each}}
+    </ul>
+    <form action="/comment" method="post">
+        <input placeholder="你叫什么" name="nick" /><br />
+        <textarea cols="20" name="content">
+        </textarea><br />
+        <input type="file" name="file">
+        <button id="btn" type="submit" style="width: 100px;">发表评论</button><br />
+    </form>
+</body>
+
+</html>

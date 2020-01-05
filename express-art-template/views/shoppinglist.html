@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title>shopping list</title>
+</head>
+
+<body>
+    <p>书籍清单：</p>
+    <ul>
+        {{each list}}
+        <li>{{$value.name}}</li>
+        {{/each}}
+    </ul>
+</body>
+
+</html>
