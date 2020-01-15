@@ -1,0 +1,14 @@
+{
+  "name": "mongoose-demo",
+  "version": "1.0.0",
+  "description": "mongoose lib demo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "guo tian hao",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.8.7"
+  }
+}
