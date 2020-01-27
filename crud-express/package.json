@@ -9,6 +9,7 @@
   "author": "gth",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "mongoose": "^5.8.9"
   }
 }

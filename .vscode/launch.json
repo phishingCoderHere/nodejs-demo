@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/i18n/index.js",
-            "cwd": "${workspaceFolder}/i18n"
+            "program": "${workspaceFolder}/crud-express/index.js",
+            "cwd": "${workspaceFolder}/crud-express"
         }
     ]
 }
