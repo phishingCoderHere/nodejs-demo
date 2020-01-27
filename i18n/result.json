@@ -1,0 +1,58 @@
+{
+    "componentsTodoList": {
+        "flowTodo": "To-do List",
+        "approval": "Approval"
+    },
+    "temporaryApproveForm": {
+        "tips32": "Enter Approved Quantity"
+    },
+    "suppStatusUpdateFrom": {
+        "tips15": "Please choose whether to cancel the old directory",
+        "cancelOldName": "Cancel Old Directory",
+        "sureSubmit": "Confirm Submission",
+        "cancelSubit": "Cancel Submission",
+        "tips16": "Current page selection is empty, choose whether to submit",
+        "tisp17": "This supplier is not a qualified supplier, please complete the inclusion process first"
+    },
+    "suppPurchasOrderQuery": {
+        "index": {
+            "emailToSupp": "Send Email"
+        }
+    },
+    "asnShipOrder4": {
+        "isConfirmSync": "Please confirm whether it is synchronized",
+        "remind": "Tips"
+    },
+    "researchOrderForm": {
+        "tips199": "Select Project Manager",
+        "tips200": "Select Product Line Manager",
+        "productionManager": "Product Line Manager",
+        "proManager": "Project Manager"
+    },
+    "mdSuppSelector": {
+        "suppCName": "Suppliers Chinese Abbreviation",
+        "suppSName": "Suppliers English Abbreviation"
+    },
+    "priceStore": {
+        "projectName": "Project Name",
+        "priceStatusSecond": "The second price state",
+        "priceStatusSecondPrice": "Price of the second price state",
+        "taxCodeDict": "Tax Code",
+        "msg1141": "The selected price library details exist in the SAP material code is empty, please deselect!",
+        "msg1142": "The selected price library details exist in the second price state is empty, please deselect it!",
+        "msg1143": "Please select at least one item!",
+        "xunbaojia": "Inquiry",
+        "edit": "Edit",
+        "crt": "Create",
+        "title1141": "Initiate pricing approval",
+        "isDjComplete114": "Pricing Status",
+        "seekSuppFileList": "Bidders Accessories",
+        "priceStatusSecondPrice2": "Price of the second price state",
+        "priceStatusSecond2": "The second price state",
+        "rfqApplyCode114": "Inquiry Application Number",
+        "btn1": "Initiate pricing approval",
+        "priceDateEnd": "Quote Date To",
+        "priceDateStart": "Quote Dates From",
+        "suppCode": "Vendor Code"
+    }
+}
