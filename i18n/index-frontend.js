@@ -5,7 +5,7 @@ const _ = require('lodash')
 
 let excelArr = []
 
-fs.readFile('./前后台8号之后新增翻译-汇总1.xlsx', (err, data) => {
+fs.readFile('./2020年2月11日153205.xlsx', (err, data) => {
     if (err) throw err;
     const wb = XLSX.read(data, {
         type: 'buffer'

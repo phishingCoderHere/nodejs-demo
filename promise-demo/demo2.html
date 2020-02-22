@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>demo2</title>
+</head>
+
+<body>
+    <button onclick="send()">Send</button>
+    <p id="txtArea"></p>
+</body>
+
+</html>
+<script>
+    function send() {
+        sendReq().then(resp => {
+            console.log(resp.responseText);
+            const p = document.getElementById('txtArea')
+            p.innerText = resp.responseText
+        })
+    }
+    function sendReq() {
+        return new Promise((resolve, reject) => {
+            const httpReq = new XMLHttpRequest()
+            httpReq.onload = function handleEvent(e) {
+                console.log(e);
+                console.log('httpReq->', httpReq);
+                resolve(httpReq)
+            }
+            httpReq.onerror = function handleEvent(e) {
+                console.log(e);
+                console.log('httpReq->', httpReq);
+                reject(httpReq)
+            }
+            httpReq.open('GET', 'http://localhost:3000', true)
+            httpReq.send()
+        })
+
+    }
+
+
+</script>

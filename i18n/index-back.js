@@ -29,12 +29,12 @@ reader.on('close', function () {
     console.log(map);
     console.log(map.length);
     _.merge(resultmap, map)
-    fs.readFile('./前后台8号之后新增翻译-汇总1.xlsx', (err, data) => {
+    fs.readFile('./翻译补充-张明20200216.xlsx', (err, data) => {
         if (err) throw err;
         const wb = XLSX.read(data, {
             type: 'buffer'
         })
-        excelArr = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[1]])
+        excelArr = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]])
         console.log(excelArr);
 
         for (var [key] of map) {
