@@ -66,4 +66,3 @@ function sync() {
     })
 }
 noSync()
-sync()
