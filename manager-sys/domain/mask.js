@@ -12,5 +12,5 @@ module.exports = (mongoose) => {
                 modifyUser: Number
             }
         );
-    return User
+    return Mask
 }

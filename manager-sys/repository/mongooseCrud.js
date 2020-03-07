@@ -60,13 +60,24 @@ function find(Model, criteria, callback) {
 }
 
 /**
- * 条件删除
+ * 删除
  * @param {*} Model
  * @param {*} criteria 
  * @param {*} callback 
  */
-function deleteByCriteria(Model, criteria, callback) {
-    Model.remove(criteria, (err, ret) => {
-        callback(err, ret)
+function removeById(Model, id, callback) {
+    findOne(Model, { _id: id }, (err, ret) => {
+        ret.remove().then((product) => {
+            callback(product)
+        }).catch(function (err) {
+            assert.ok(err)
+        })
     })
+
 }
+
+module.exports.updateById = updateById;
+module.exports.insert = insert;
+module.exports.findOne = findOne;
+module.exports.find = find;
+module.exports.removeById = removeById;
