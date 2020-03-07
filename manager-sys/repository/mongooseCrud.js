@@ -1,36 +1,72 @@
-
+const moment = require('moment')
 /**
- * 
- * @param {*} obj 
+ * 根据id更新
+ * @param {*} Model 
  * @param {*} id 
- * @param {*} newObj 
+ * @param {*} entity 
  * @param {*} callback 
  */
-function updateById(modal, id, entity, callback) {
-    modal.findByIdAndUpdate(id, entity, (err, ret) => {
+function updateById(Model, id, entity, callback) {
+    if (req.session.user) {
+        const key = req.session.user._id
+        entity.modifyDate = moment.now()
+        entity.modifyUser = key
+    }
+    Model.findByIdAndUpdate(id, entity, (err, ret) => {
         callback(err, ret)
     })
 }
 
-function insert(Obj, row, callback) {
-    const kitty = new Obj(row);
-    kitty.save().then(() => callback());
+/**
+ * 插入一条记录
+ * @param {*} Model 
+ * @param {*} row 
+ * @param {*} callback 
+ */
+function insert(Model, row, callback) {
+    if (req.session.user) {
+        const key = req.session.user._id
+        row.createDate = moment.now()
+        row.modifyDate = moment.now()
+        row.createUser = key
+        row.modifyUser = key
+    }
+    const entity = new Model(row);
+    entity.save().then(() => callback());
 }
 
-function findOne(obj, criteria, callback) {
-    obj.findOne(criteria, (err, ret) => {
+/**
+ * 条件查询一条
+ * @param {*} Model 
+ * @param {*} criteria 
+ * @param {*} callback 
+ */
+function findOne(Model, criteria, callback) {
+    Model.findOne(criteria, (err, ret) => {
         callback(err, ret)
     })
 }
 
-function find(obj, criteria, callback) {
-    obj.find(criteria, (err, ret) => {
+/**
+ * 条件查询一条
+ * @param {*} Model 
+ * @param {*} criteria 
+ * @param {*} callback 
+ */
+function find(Model, criteria, callback) {
+    Model.find(criteria, (err, ret) => {
         callback(err, ret)
     })
 }
 
-function deleteByCriteria(obj, criteria, callback) {
-    obj.remove(criteria, (err, ret) => {
+/**
+ * 条件删除
+ * @param {*} Model
+ * @param {*} criteria 
+ * @param {*} callback 
+ */
+function deleteByCriteria(Model, criteria, callback) {
+    Model.remove(criteria, (err, ret) => {
         callback(err, ret)
     })
 }

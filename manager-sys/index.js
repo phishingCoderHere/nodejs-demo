@@ -25,6 +25,21 @@ app.use('/resources', express.static(path.join(__dirname, '/', 'pages/login/reso
 app.use('/', express.static(path.join(__dirname, '/', 'pages/login/resources')))
 app.set('views', path.join(__dirname, '/', 'pages'))
 
+/**
+ * 统一拦截
+ */
+router.get('/*', function (req, res) {
+    if (!req.session.isLogin) {
+        if (req.url.endsWith('.js') || req.url.endsWith('.css') ||
+            req.url.endsWith('.woff') || req.url.endsWith('.woff2') ||
+            req.url.endsWith('.jpg') || req.url.endsWith('.png')) {
+            return req.next()
+        }
+        res.render('login/login.html')
+    } else {
+        req.next()
+    }
+})
 
 app.listen(8080, () => {
     console.log('server running on port 8080....');

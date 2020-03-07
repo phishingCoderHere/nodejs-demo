@@ -6,19 +6,7 @@ let mod = this
 mod.mongoose = undefined
 let User = undefined
 
-router.get('/*', function (req, res) {
-    if (!req.session.isLogin) {
-        if (req.url.endsWith('.js') || req.url.endsWith('.css') ||
-            req.url.endsWith('.woff') || req.url.endsWith('.woff2') ||
-            req.url.endsWith('.jpg') || req.url.endsWith('.png')) {
-            return req.next()
 
-        }
-        res.render('login/login.html')
-    } else {
-        req.next()
-    }
-})
 router.get('/', function (req, res) {
     res.render('welcome.html')
 })
@@ -32,6 +20,7 @@ router.post('/login', function (req, res) {
         err && console.error(err)
         if (ret.length > 0 && md5(pwd) === ret[0].password) {
             req.session.isLogin = true;
+            req.session.user = ret[0]
             return res.render('user/home.html')
         }
         res.redirect('/login')
