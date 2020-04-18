@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/manager-sys/index.js",
+            "program": "${workspaceFolder}/javascript-demo/tree-demo.js",
             "cwd": "${workspaceFolder}/manager-sys"
         }
     ]
