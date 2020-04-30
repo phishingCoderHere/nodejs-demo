@@ -11,7 +11,7 @@
     "comments": "^0.3.6",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mongoose": "file:mongoose",
