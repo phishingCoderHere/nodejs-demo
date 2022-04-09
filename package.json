@@ -13,7 +13,7 @@
     "express-art-template": "^1.0.1",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "file:mongoose",
     "url": "^0.11.0"
   },
