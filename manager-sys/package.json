@@ -14,7 +14,7 @@
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.0",
     "md5": "^2.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.9.3"
   }
 }
